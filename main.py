@@ -7,7 +7,9 @@ import os
 r = sr.Recognizer()
 
 # TODO: null deger donunce hata veriyor try except kur
-# TODO: projeyi kaydederek ilerlemek için github ile kullanımı öğren --olası hatalar için--
+# TODO: key value değeri olarak komutları txt de tut, program üzerinden key value ekle
+
+
 
 def kararVer():
     with sr.Microphone(device_index=2) as source:
@@ -70,16 +72,10 @@ while True:
             continue
 
 
-    #
-    # masaüstündeyken
-    # - fotoğraflar klasörünü aç denildi
-    # - klasör açıldıktan sonra başka işlem yapmak istioyr musunuz denildi
-    # - evet -> döngü devam
-    # - foto1 i aç
-    # - başka işlem yapmak istiyor musunuz
-    # - hayır ----> break
-    #
-    #key value değeri olarak komutları txt de tut
-    #program üzerinden key value ekle
+
+
+
+
+
 
 
