@@ -9,7 +9,9 @@ r = sr.Recognizer()
 # TODO: null deger donunce hata veriyor try except kur
 # TODO: key value değeri olarak komutları txt de tut, program üzerinden key value ekle
 
-
+# TODO:3 4 tane yeni özellik ekle
+# TODO:konuşarak tx aç txt ye konuşarak not aldır
+#
 
 def kararVer():
     with sr.Microphone(device_index=2) as source:
