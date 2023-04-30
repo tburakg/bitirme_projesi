@@ -40,20 +40,20 @@ while True:
         # read the audio data from the default microphone
         audio_data = r.record(source, duration=5)
         print("Recognizing...")
-        # convert speech to text
-        # we can change language with language parameter (default en)
-        # tr yaparsak youtube'u aç dediğimizde
-        text = r.recognize_google(audio_data)
+        text = r.recognize_google(audio_data, language="tr")
         print(text)
     query = text.lower()
 
-    if 'open youtube' in query:
+    if 'youtube aç' in query:
         # http eklemezen internet explorer da açıyor
         webbrowser.open("http://youtube.com")
         karar = kararVer()
+        if "no" in karar:
+            break
+        elif "yes" in karar:
+            continue
 
-
-    elif 'open book' in query:
+    elif 'pdf aç' in query:
         filePath = "TalhaBurakGursel_Cv.pdf"
         os.startfile(filePath)
 
@@ -63,7 +63,7 @@ while True:
         elif "yes" in karar:
             continue
 
-    elif 'open video' in query:
+    elif 'video aç' in query:
         filePath = "video1.mp4"
         os.startfile(filePath)
         karar = kararVer()
@@ -72,7 +72,7 @@ while True:
         elif "yes" in karar:
             continue
 
-    elif 'open image' in query:
+    elif 'fotoğraf aç' in query:
         filePath = "image1.jpg"
         os.startfile(filePath)
         karar = kararVer()
@@ -81,7 +81,7 @@ while True:
         elif "yes" in karar:
             continue
 
-    elif 'open txt' in query:
+    elif 'not al' in query:
 
         not_karar = notAl()
 
@@ -93,6 +93,19 @@ while True:
             break
         elif "yes" in karar:
             continue
+
+    elif 'şarkı aç' in query:
+        filePath = "sample.mp3"
+        os.startfile(filePath)
+        karar = kararVer()
+        if "no" in karar:
+            break
+        elif "yes" in karar:
+            continue
+
+
+
+
 
 
 
